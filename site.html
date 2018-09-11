@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/maps/documentation/javascript/cgc/demos.css">
 <body id="myPage">
 
 <!-- Sidebar on click -->
@@ -196,30 +197,8 @@
 </div>
 
 <!-- Google Maps -->
-<div id="googleMap" style="width:100%;height:420px;"></div>
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(-30.0120486,-51.179196);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
+</script><div style='overflow:hidden;height:433px;width:1500px;'><div id='gmap_canvas' style='height:433px;width:1500px;'></div><div><small><a href="embedgooglemaps.com/pt/">https://embedgooglemaps.com/pt/</a></small></div><div><small><a href="https://sparpedia.no/">sparpedia</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:18,center:new google.maps.LatLng(-30.0120486,-51.17919599999999),mapTypeId: google.maps.MapTypeId.HYBRID};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-30.0120486,-51.17919599999999)});infowindow = new google.maps.InfoWindow({content:'<strong>Faculdade Dom Bosco</strong><br> R. Mal. José Inácio da Silva, 355 - Passo d\'Areia, Porto Alegre - RS<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
