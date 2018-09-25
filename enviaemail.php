@@ -21,6 +21,6 @@ if(isset($_POST['enviar'])){
     mail($destinatario,$assunto,$msg,$headers);
 
     // volta para contato.html
-    header("Location: site.html");
+    header("Location:site.html");
 }
 ?>
