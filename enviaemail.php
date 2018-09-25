@@ -22,5 +22,7 @@ if(isset($_POST['enviar'])){
 
     // volta para contato.html
     header("Location:site.html");
+    exit;
+
 }
 ?>
